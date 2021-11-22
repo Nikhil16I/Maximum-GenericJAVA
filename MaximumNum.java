@@ -12,6 +12,7 @@ public MaximumNum(Type Variable1, Type Variable2, Type Variable3) {
 		VARIABLE2 = Variable2;
 		VARIABLE3 = Variable3;
 	}
+
 public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3 ) {
 		 Type MaxxVal = Variable3;
 		 
@@ -59,5 +60,4 @@ public static void main(String[] args) {
 	MaxxVal("Chocolate", "Candy","M&M");
 	MaxxVal("Gogle", "Google","Gooogle" );  //For float String Value
  }
-
 }
