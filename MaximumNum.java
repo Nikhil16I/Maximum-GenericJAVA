@@ -1,6 +1,17 @@
 package com.TestMaximum;
 
-public class MaximumNum {
+public class MaximumNum<Type extends Comparable<Type>> {
+	public final Type VARIABLE1;
+	public final Type VARIABLE2;
+	public final Type VARIABLE3;
+	
+	/*ByUsing Constructor - REAFACTOR-02*/
+public MaximumNum(Type Variable1, Type Variable2, Type Variable3) {
+		super();
+		VARIABLE1 = Variable1;
+		VARIABLE2 = Variable2;
+		VARIABLE3 = Variable3;
+	}
 
 public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3 ) {
 		 Type MaxxVal = Variable3;
