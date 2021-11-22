@@ -16,6 +16,7 @@ public class MaximumNum<Type extends Comparable<Type>> {
 		VARIABLE4 = Variable4;
 		VARIABLE5 = Variable5;
 	}
+
 public Type	MaxxValResult() {
 	Type MaxNum =MaximumNum.MaxxValResult(VARIABLE1, VARIABLE2, VARIABLE3, VARIABLE4, VARIABLE5);
 	printMaxResult(MaxNum); 
@@ -26,7 +27,7 @@ public Type	MaxxValResult() {
 public void printMaxResult(Type MaxxVal) {      
 	System.out.println("printing-> "+MaxxVal+ " is Maximum Value"); 
 }
-	public static <Type extends Comparable <Type>> Type MaxxValResult(Type Variable1 , Type Variable2 , Type Variable3,Type Variable4,Type Variable5) {
+	public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3,Type Variable4,Type Variable5) {
 		Type MaxxVal = Variable5;
 		
 		if(Variable1.compareTo(Variable2) > 0 && Variable1.compareTo(Variable3) > 0 && Variable1.compareTo(Variable4)>0 && Variable1.compareTo(MaxxVal)>0) {
