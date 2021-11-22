@@ -17,60 +17,63 @@ public class MaximumNum<Type extends Comparable<Type>> {
 		VARIABLE5 = Variable5;
 	}
 
+public Type	MaxxValResult() {
+	Type MaxNum =MaximumNum.MaxxValResult(VARIABLE1, VARIABLE2, VARIABLE3, VARIABLE4, VARIABLE5);
+	printMaxResult(MaxNum); 
+	return MaxNum;
+	/*printmaxresult mentioned instead of printmax*/
+}
+         /*Printing the Maximum Value */
+public void printMaxResult(Type MaxxVal) {      
+	System.out.println("printing-> "+MaxxVal+ " is Maximum Value"); 
+}
 	public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3,Type Variable4,Type Variable5) {
 		Type MaxxVal = Variable5;
 		
 		if(Variable1.compareTo(Variable2) > 0 && Variable1.compareTo(Variable3) > 0 && Variable1.compareTo(Variable4)>0 && Variable1.compareTo(MaxxVal)>0) {
 			MaxxVal = Variable1;
-			System.out.println("The Value  " + MaxxVal + " Is Maximum in this Case ");
 			System.out.println();//SPACE
+			System.out.println("The Value  " + MaxxVal + " Is Maximum in this Case ");
 		}
 		else if(Variable2.compareTo(Variable1) > 0 && Variable2.compareTo(MaxxVal) > 0) {
 			MaxxVal = Variable2;
-			System.out.println("The Value  " + MaxxVal +" Is Maximum in this Case");
 			System.out.println();//SPACE
+			System.out.println("The Value  " + MaxxVal +" Is Maximum in this Case");
 		}
 		else if(Variable3.compareTo(Variable1)>0 && Variable3.compareTo(Variable2)>0 && Variable3.compareTo(Variable4)>0 && Variable3.compareTo(MaxxVal)>0){
-			MaxxVal = Variable3;		
-			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
+			MaxxVal = Variable3;
 			System.out.println();//SPACE
+			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 		}
 		else if(Variable4.compareTo(Variable1)>0 && Variable4.compareTo(Variable2)>0 && Variable4.compareTo(Variable3)>0 && Variable4.compareTo(MaxxVal)>0){
 			MaxxVal = Variable4;
-			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 			System.out.println();//SPACE
+			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 		}
 		else {
 			MaxxVal=Variable5;
-			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 			System.out.println();//SPACE
+			System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 		}
 		return MaxxVal;
 	}
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to the MAXIMUM NUMBER Program");
-		System.out.println();//SPACE
-		//Testing The Max Value Result from the example Integer
-		System.out.println("Testing Max For given Integer");
-		System.out.println();//SPACE
 		
-		MaxxVal(36, 99 , 50,49,61); 
-		MaxxVal(55, 22, 85,52,88);        //For Integer Value
 		
-		//Testing The Max Value Result from the example Float Integer
-		System.out.println("Testing Max For given Float Integer");
-		System.out.println();//SPACE
+		MaximumNum<Integer> IntVal = new MaximumNum<Integer>(36, 99 , 50,49,61); 
+		IntVal.MaxxValResult();        //For Integer Value
 		
-		MaxxVal(3.6f, 9.3f, 2.6f,5.0f,2.1f);
-		MaxxVal(0.9f, 0.3f, 0.6f,0.7f,0.5f);  //For float Integer Value
 		
-		//Testing The Max Value Result from the example String Values
-		System.out.println("Testing Max For given Float Integer");
-		System.out.println();//SPACE
 		
-		MaxxVal("Chocolate", "Candy","M&M","Wonka","Perk");
-		MaxxVal("Gogle", "Google","Gooogle","Goooogle","Gooooogle" );  //For float String Value
+		MaximumNum<Float> floatVal = new MaximumNum<Float>(3.6f, 9.3f, 2.6f,5.0f,2.1f);
+		floatVal.MaxxValResult();  //For float Integer Value
+		
+		
+		
+		MaximumNum<String> StringVal = new MaximumNum<String>("Chocolate", "Candy","M&M","Wonka","Perk");
+		StringVal.MaxxValResult();  //For float String Value
 	}
 	
 }
