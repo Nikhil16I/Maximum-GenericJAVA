@@ -59,5 +59,5 @@ public static void main(String[] args) {
 
 	MaxxVal("Chocolate", "Candy","M&M");
 	MaxxVal("Gogle", "Google","Gooogle" );  //For float String Value
- }
+  }
 }
