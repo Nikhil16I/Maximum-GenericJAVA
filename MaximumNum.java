@@ -16,6 +16,7 @@ public class MaximumNum<Type extends Comparable<Type>> {
 		VARIABLE4 = Variable4;
 		VARIABLE5 = Variable5;
 	}
+
 	public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3,Type Variable4,Type Variable5) {
 		Type MaxxVal = Variable5;
 		
