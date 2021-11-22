@@ -74,7 +74,7 @@ public void printMaxResult(Type MaxxVal) {
 		
 		MaximumNum<String> StringVal = new MaximumNum<String>("Chocolate", "Candy","M&M","Wonka","Perk");
 		StringVal.MaxxValResult();  //For float String Value
-	}
+     }
 	
 }
 	
