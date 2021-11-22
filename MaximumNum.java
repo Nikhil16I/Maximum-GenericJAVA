@@ -2,49 +2,27 @@ package com.TestMaximum;
 
 public class MaximumNum {
 
-public static void WrapInteger(Integer Num1,Integer Num2,Integer Num3) {
-		
- if(Num1.compareTo(Num2) > 0 && Num1.compareTo(Num3) > 0) {
-System.out.println("The Value  " + Num1 + " Is Maximum in this Case ");
-System.out.println();//SPACE
-  }
-else if(Num2.compareTo(Num1) > 0 && Num2.compareTo(Num3) > 0) {
-System.out.println("The Value  " + Num2 +" Is Maximum in this Case");
-System.out.println();//SPACE
- }
-else {
-System.out.println("The Value  " + Num3 +"  Is Maximum in this Case");
-System.out.println();//SPACE
-
-	 }
-  }
-public static void WrapFloat( Float Num1, Float Num2,Float Num3) {
-	if(Num1.compareTo(Num2) > 0 && Num1.compareTo(Num3) > 0) {
-		System.out.println("The Value  " + Num1 + " Is Maximum in this Case ");
+public static <Type extends Comparable <Type>> Type MaxxVal(Type Variable1 , Type Variable2 , Type Variable3 ) {
+		 Type MaxxVal = Variable3;
+		 
+		 if(Variable1.compareTo(Variable2) > 0 && Variable1.compareTo(MaxxVal) > 0) {
+		MaxxVal = Variable1;
+		System.out.println("TestCase1.1 -"+"The test data has Max Numberin the First position");
+		System.out.println("The Value  " + MaxxVal + " Is Maximum in this Case ");
 		System.out.println();//SPACE
 		  }
-		else if(Num2.compareTo(Num1) > 0 && Num2.compareTo(Num3) > 0) {
-		System.out.println("The Value  " + Num2 +" Is Maximum in this Case");
+		else if(Variable2.compareTo(Variable1) > 0 && Variable2.compareTo(MaxxVal) > 0) {
+		MaxxVal = Variable2;
+		System.out.println("TestCase1.2 -"+"The test data has Max Number in the Second position");
+		System.out.println("The Value  " + MaxxVal +" Is Maximum in this Case");
 		System.out.println();//SPACE
 		 }
 		else {
-		System.out.println("The Value  " + Num3 +"  Is Maximum in this Case");
+		System.out.println("TestCase1.3 -"+"The test data has Max Number in the Third position");
+		System.out.println("The Value  " + MaxxVal +"  Is Maximum in this Case");
 		System.out.println();//SPACE
- }
-}
-public static void WrapStrings(String Num1,String Num2,String Num3) {
-	if(Num1.compareTo(Num2) > 0 && Num1.compareTo(Num3) > 0) {
-		System.out.println("The Value  " + Num1 + " Is Maximum in this Case ");
-		System.out.println();//SPACE
-		  }
-		else if(Num2.compareTo(Num1) > 0 && Num2.compareTo(Num3) > 0) {
-		System.out.println("The Value  " + Num2 +" Is Maximum in this Case");
-		System.out.println();//SPACE
-		 }
-		else {
-		System.out.println("The Value  " + Num3 +"  Is Maximum in this Case");
-		System.out.println();//SPACE
- }
+  }
+return MaxxVal;
 }
 public static void main(String[] args) {
 	
@@ -54,22 +32,22 @@ public static void main(String[] args) {
 	System.out.println("Testing Max For given Integer");
 	System.out.println();//SPACE
 	
-	WrapInteger(36, 99 , 50); 
-	WrapInteger(55, 22, 85);        //For Integer Value
+	MaxxVal(36, 99 , 50); 
+	MaxxVal(55, 22, 85);        //For Integer Value
 	 	
 	//Testing The Max Value Result from the example Float Integer
 	System.out.println("Testing Max For given Float Integer");
 	System.out.println();//SPACE
 	
-	WrapFloat(3.6f, 9.3f, 2.6f);
-	WrapFloat(0.9f, 0.3f, 0.6f);  //For float Integer Value
+	MaxxVal(3.6f, 9.3f, 2.6f);
+	MaxxVal(0.9f, 0.3f, 0.6f);  //For float Integer Value
  	
 	//Testing The Max Value Result from the example String Values
 	System.out.println("Testing Max For given Float Integer");
 	System.out.println();//SPACE
 
-	WrapStrings("Chocolate", "Candy","M&M");
-	WrapStrings("Gogle", "Google","Gooogle" );  //For float String Value
+	MaxxVal("Chocolate", "Candy","M&M");
+	MaxxVal("Gogle", "Google","Gooogle" );  //For float String Value
  }
 
 }
